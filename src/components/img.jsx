@@ -1,16 +1,17 @@
-
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import ID from "./Id.jsx";
+import Produc from "./produc.jsx";
 
 
-function View() {
+
+function Img() {
 
     const [data, setData] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3000/api/product/view')
+        axios.get('http://18.144.84.131/api/product/view')
             .then(res => {
+                console.log(res.data)
                 setData(res.data)
             })
             .catch(err => {
@@ -18,13 +19,19 @@ function View() {
             })
     }, [])
 
+
+
+
     return (
-        <div className="container-Id-View">
+        <div className="container-card-Upimg">
            {
             data.map((data) => (
-                    <ID
-                    id={data.id}
+                    <Produc
+                    name={data.name}
                     nameProduc={data.nameProduc}
+                    description={data.description}
+                    price={data.price}
+                    amount={data.amount}
                     />
             ))
            }
@@ -38,4 +45,4 @@ function View() {
 
 }
 
-export default View;
+export default Img;

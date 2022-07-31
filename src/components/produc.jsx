@@ -1,7 +1,7 @@
 import "../asset/Style/Login.css"
 
 
-const Card = (props) => {
+const Produc = (props) => {
     return (
         <div className="form-getImg">
             <img src={props.name} class="tamalito-img-top"></img><br /><br/>
@@ -13,4 +13,4 @@ const Card = (props) => {
     )
 }
 
-export default Card;
+export default Produc;

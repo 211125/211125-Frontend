@@ -5,12 +5,12 @@ import axios from "axios";
 import {NavLink} from "react-router-dom";
 
 
-function Recover_pass() {
+function RecoverPass() {
   const data = useState({
     email: '',
 })
 
-  const url = 'http://localhost:3000/api/email/send'
+  const url = 'http://18.144.84.131/api/email/send'
 
   const { handleSubmit, register, formState: { errors } } = useForm();
 
@@ -86,4 +86,4 @@ function Recover_pass() {
   );
 }
 
-export default Recover_pass;
+export default RecoverPass;

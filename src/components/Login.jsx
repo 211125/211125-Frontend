@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Background from "./background/Background2"
 import Text from "./Text";
-import Sign_up from "./Sign_up" 
+import SignUp from "./SignUp"
 
 
 function Login(){
@@ -17,7 +17,7 @@ function Login(){
         validat: ''
     })
 
-    const url= 'http://localhost:3000/api/user/login'
+    const url= 'http://18.144.84.131/api/user/login'
   
     const { handleSubmit, register, formState: { errors } } = useForm();
 
@@ -119,10 +119,10 @@ function Login(){
                     </form>
                 </div>
             </div>
-            <Sign_up
+            <SignUp
             estado={estado}
             cambiarestado={cambiarestado}
-            ></Sign_up>
+            ></SignUp>
         </div>
     );
 }

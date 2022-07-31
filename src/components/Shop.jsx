@@ -1,4 +1,4 @@
-import Upimg from "./Upimg";
+import Img from "./img";
 
 
 function Shop() {
@@ -45,7 +45,7 @@ function Shop() {
                     </div>
                 </nav>
             </div>
-            <Upimg></Upimg>
+            <Img></Img>
         </div>
     );
 }

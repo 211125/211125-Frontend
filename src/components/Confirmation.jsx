@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 import axios from "axios";
 import img from "../media/404-tick.png";
 
-function Confirmation_Acount() {
+function Confirmation() {
     const navigator = useNavigate()
     const [data, setData] = useState({
         valor: 'false'
@@ -31,7 +31,7 @@ function Confirmation_Acount() {
           "email": params.get('email'),
         });
 
-        const url = 'http://localhost:3000/api/user/config?'
+        const url = 'http://18.144.84.131/api/user/config?'
 
         if (data.valor === 'true') {
             console.log('Validation Success: ' + data.valor);
@@ -116,4 +116,4 @@ function Confirmation_Acount() {
     );
 }
 
-export default Confirmation_Acount;
+export default Confirmation;

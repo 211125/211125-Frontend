@@ -15,7 +15,7 @@ function Reset_pass() {
         password: ''
     })
 
-    const url = 'http://localhost:3000/api/user/update_password'
+    const url = 'http://18.144.84.131/api/user/update_password'
     const navigator = useNavigate()
     const { handleSubmit, register, formState: { errors } } = useForm();
 

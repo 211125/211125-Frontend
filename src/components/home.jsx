@@ -3,15 +3,15 @@ import Swal from 'sweetalert2'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Label, Input, FormGroup } from 'reactstrap';
-import Upimg from './Upimg';
+import Img from './img';
 import Background from "./background/Background"
-import View from './View';
+import Watch from './watch';
 
 
 
 
 
-function Index() {
+function Home() {
     const [modaladd, setModaladd] = useState(false);
     const add = () => setModaladd(!modaladd);
     const [modalupdate, setModalupdate] = useState(false);
@@ -83,7 +83,7 @@ function Index() {
 
 
 
-    const urldelet = 'http://localhost:3000/api/product/delete'
+    const urldelet = 'http://18.144.84.131/api/product/delete'
 
     const EnviarDelet = (d) => {
 
@@ -112,7 +112,7 @@ function Index() {
     }
 
 
-    const urlupdate = 'http://localhost:3000/api/product/update'
+    const urlupdate = 'http://18.144.84.131/api/product/update'
 
     function Enviarupdate() {
         const formData = new FormData();
@@ -149,7 +149,7 @@ function Index() {
 
     }
 
-    const urladd = 'http://localhost:3000/api/product/create'
+    const urladd = 'http://18.144.84.131/api/product/create'
     function Enviar() {
         const formData = new FormData();
         formData.append("name", data1.selectedFile);
@@ -203,7 +203,7 @@ function Index() {
                
             </div>
         
-            <Upimg></Upimg>
+            <Img></Img>
             <div>
                 <form>
                     <Modal isOpen={modaladd} >
@@ -222,20 +222,20 @@ function Index() {
                         </div>
                                     </div>
                                     <div className="label">
-                                        <Label for="price">Titulo</Label>
+                                     
                                         <input type="text" className="Input" onChange={(e) => handle(e)} id="nameProduc" value={data1.nameProduc} placeholder="titulo" required ></input>
                                     </div>
-                                    <div>
-                                        <Label for="price">Description</Label>
-                                        <input type="text" className="form-control" onChange={(e) => handle(e)} id="description" value={data1.description} placeholder="descriptions" required ></input>
+                                    <div className="label">
+                           
+                                        <input type="text" className="Input" onChange={(e) => handle(e)} id="description" value={data1.description} placeholder="descriptions" required ></input>
                                     </div>
-                                    <div>
-                                        <Label for="Stock">Precio</Label>
-                                        <input type="text" className="form-control" onChange={(e) => handle(e)} id="price" value={data1.price} placeholder="precio" required></input>
+                                    <div className="label">
+                                   
+                                        <input type="Number" className="Input" onChange={(e) => handle(e)} id="price" value={data1.price} placeholder="precio" required></input>
                                     </div>
-                                    <div>
-                                        <Label for="Stock">Stock</Label>
-                                        <input type="text" className="form-control" onChange={(e) => handle(e)} id="amount" value={data1.amount} placeholder="Stock" required></input>
+                                    <div className="label">
+                                        
+                                        <input type="Number" className="Input" onChange={(e) => handle(e)} id="amount" value={data1.amount} placeholder="Stock" required></input>
                                     </div>
                                     <div className="label">
                         <Button type="submit" onClick={Enviar} color="primary" className="button-62" >Guardar</Button>
@@ -261,7 +261,7 @@ function Index() {
                             <form className="form-Upload" >
                               
                                 <h3>Copia y Pega el Token</h3>
-                                  <View/>
+                                  <Watch/>
                                     <div>
                                         <Label for="price">Token</Label>
                                         <input type="text" className="form-control" onChange={(u) => handleupdate(u)} id="id" value={data2.id} placeholder="Token" required ></input>
@@ -301,7 +301,7 @@ function Index() {
                     <Modal isOpen={modaldelet} >
                             <form className="was-validated" noValidate  >
                                     <h3>Copia y Pega el Token</h3>
-                                    <View/>
+                                    <Watch/>
                                     <div class="alert alert-primary" role="alert">
                                     </div>
                                     <div>
@@ -327,4 +327,4 @@ function Index() {
     );
 }
 
-export default Index;
+export default Home;

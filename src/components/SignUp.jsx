@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
-function Sign_up({children,estado,cambiarestado}){
+function SignUp({children,estado,cambiarestado}){
     const navigator = useNavigate()
     const data = useState({
         name: "",
@@ -13,7 +13,7 @@ function Sign_up({children,estado,cambiarestado}){
         password: ""
     })
 
-    const url = 'http://localhost:3000/api/user/create'
+    const url = 'http://18.144.84.131/api/user/create'
 
 
 
@@ -116,4 +116,4 @@ function Sign_up({children,estado,cambiarestado}){
     );
 }
 
-export default Sign_up;
+export default SignUp;
