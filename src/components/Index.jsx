@@ -222,20 +222,20 @@ function Index() {
                         </div>
                                     </div>
                                     <div className="label">
-                                        <Label for="price">Titulo</Label>
+                                     
                                         <input type="text" className="Input" onChange={(e) => handle(e)} id="nameProduc" value={data1.nameProduc} placeholder="titulo" required ></input>
                                     </div>
-                                    <div>
-                                        <Label for="price">Description</Label>
-                                        <input type="text" className="form-control" onChange={(e) => handle(e)} id="description" value={data1.description} placeholder="descriptions" required ></input>
+                                    <div className="label">
+                           
+                                        <input type="text" className="Input" onChange={(e) => handle(e)} id="description" value={data1.description} placeholder="descriptions" required ></input>
                                     </div>
-                                    <div>
-                                        <Label for="Stock">Precio</Label>
-                                        <input type="text" className="form-control" onChange={(e) => handle(e)} id="price" value={data1.price} placeholder="precio" required></input>
+                                    <div className="label">
+                                   
+                                        <input type="Number" className="Input" onChange={(e) => handle(e)} id="price" value={data1.price} placeholder="precio" required></input>
                                     </div>
-                                    <div>
-                                        <Label for="Stock">Stock</Label>
-                                        <input type="text" className="form-control" onChange={(e) => handle(e)} id="amount" value={data1.amount} placeholder="Stock" required></input>
+                                    <div className="label">
+                                        
+                                        <input type="Number" className="Input" onChange={(e) => handle(e)} id="amount" value={data1.amount} placeholder="Stock" required></input>
                                     </div>
                                     <div className="label">
                         <Button type="submit" onClick={Enviar} color="primary" className="button-62" >Guardar</Button>
