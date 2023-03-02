@@ -9,7 +9,7 @@ function Img() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        axios.get('http://18.144.84.131/api/product/view')
+        axios.get('http://localhost:3000/api/product/view')
             .then(res => {
                 console.log(res.data)
                 setData(res.data)

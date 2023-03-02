@@ -83,7 +83,7 @@ function Home() {
 
 
 
-    const urldelet = 'http://18.144.84.131/api/product/delete'
+    const urldelet = 'http://localhost:3000/api/product/delete'
 
     const EnviarDelet = (d) => {
 
@@ -149,7 +149,7 @@ function Home() {
 
     }
 
-    const urladd = 'http://18.144.84.131/api/product/create'
+    const urladd = 'http://localhost:3000/api/product/create'
     function Enviar() {
         const formData = new FormData();
         formData.append("name", data1.selectedFile);
@@ -169,7 +169,7 @@ function Home() {
                         confirmButtonText: 'Okay'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.location.replace('/home');
+                            //window.location.replace('/home');
                         }
                     })
                 } else {
